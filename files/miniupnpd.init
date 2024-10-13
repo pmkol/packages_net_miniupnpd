@@ -217,6 +217,8 @@ stop_service() {
 }
 
 start_service() {
+	uci set upnpd.config.presentation_url="http://$(uci -q get network.lan.ipaddr)/"
+	uci commit upnpd
 	config_load "upnpd"
 	config_foreach upnpd "upnpd"
 }
