@@ -25,7 +25,7 @@ jobs:
         run: |
           git remote add upstream https://git.cooluc.com/sbwml/miniupnpd.git
           git fetch upstream
-          git merge upstream/master --allow-unrelated-histories --no-edit || exit 1
+          git merge upstream/v2.3.7 --allow-unrelated-histories --no-edit || exit 1
 
       - name: Push changes
         run: git push
